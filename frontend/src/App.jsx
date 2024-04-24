@@ -1,11 +1,11 @@
 import './App.css'
+import NasaRoutes from './componets/NasaRoutes'
 
 function App() {
 
   return (
     <>
-      <h2>Hello React</h2>
-      <h3>Hello world</h3>
+      <NasaRoutes/>
     </>
   )
 }
