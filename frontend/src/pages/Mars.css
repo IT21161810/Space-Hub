@@ -1,0 +1,27 @@
+
+.date-time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.6rem;
+    align-self: baseline;
+    margin-top: 1.8rem;
+}
+
+@media only screen and (max-width: 560px) {
+    
+    .date-time{
+        display: block;
+    }
+  }
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3.2rem;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

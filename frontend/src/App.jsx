@@ -1,5 +1,5 @@
 import './App.css'
-import NasaRoutes from './componets/NasaRoutes'
+import NasaRoutes from './routes/NasaRoutes'
 
 function App() {
 

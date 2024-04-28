@@ -21,8 +21,8 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1,color:'gray'}}>
+            Nasa Api
           </Typography>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <Button sx={{'&:hover': {backgroundColor: 'black',color: 'white',},color:'black'}}>
