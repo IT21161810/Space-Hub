@@ -1,32 +1,41 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
-const MarsCard = ({}) => {
+
+const MarsCard = ({ img_src, fullName,cameraName,roverName,landingDate,launchingDate,status}) => {
+
   return (
-    <Card sx={{ maxWidth: 290 }}>
+    <Card sx={{ maxWidth: 295}}>
       <CardMedia
-        sx={{ height: 180 }}
-        image="https://science.nasa.gov/wp-content/uploads/2023/07/52515250436-6ea8fea1ca-o1.jpg?w=4096&format=jpeg"
-        title="green iguana"
+        component="img"
+        height="170"
+        image={img_src}
+        alt="NASA"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
+      <Typography gutterBottom variant="h6" >
+          {fullName}
         </Typography>
+       
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+            Camera Name: &nbsp;{cameraName}
+        </Typography>
+        <Typography variant='body2' color="text.secondary">
+            Rover Name: &nbsp;{roverName}
+        </Typography>
+        <Typography variant='body2' color="text.secondary">
+            Landing Date: &nbsp;{landingDate}
+        </Typography>
+        <Typography variant='body2' color="text.secondary">
+          Launching Date: &nbsp;{launchingDate}
+        </Typography>
+        <Typography variant='body2' color="text.secondary">
+          Status: &nbsp;{status}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }

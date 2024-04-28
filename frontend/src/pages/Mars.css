@@ -15,13 +15,34 @@
     }
   }
 
-.cards{
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the column width as needed */
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 3.2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .earth{
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-left: 8.2rem;
     gap: 1rem;
-    margin-top: 3.2rem;
-    flex-wrap: wrap;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
+    margin-top: 6.5rem;
+  }
+
+  @media only screen and (max-width: 830px) {
+    
+    .earth{
+        display: block;
+    }
+  }
+  
+  .earthImage{
+    display: grid;
+    place-items: center;
+    margin-top: 2.5rem;
+   margin-bottom: 4rem;
+  }
