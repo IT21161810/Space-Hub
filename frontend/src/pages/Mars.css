@@ -1,56 +1,64 @@
-
-.date-time{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4.6rem;
-    align-self: baseline;
-    margin-top: 5.8rem;
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.6rem;
+  align-self: baseline;
+  margin-top: 5.8rem;
 }
 
 @media only screen and (max-width: 560px) {
-    
-    .date-time{
-        display: block;
-    }
-  }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the column width as needed */
-    justify-content: center;
-    gap: 1.2rem;
-    margin-top: 3.2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+  .date-time {
+    display: block;
   }
+}
 
-  .earth{
-    display: flex;
-    align-items: center;
-    margin-left: 8.2rem;
-    gap: 1rem;
-    margin-top: 6.5rem;
-  }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Adjust the column width as needed */
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 
-  @media only screen and (max-width: 830px) {
-    
-    .earth{
-        display: block;
-    }
-  }
-  
-  .earthImage{
-    display: grid;
-    place-items: center;
-    margin-top: 2.5rem;
-   margin-bottom: 4rem;
-  }
+.earth {
+  display: flex;
+  align-items: center;
+  margin-left: 8.2rem;
+  gap: 1rem;
+  margin-top: 6.5rem;
+}
 
-  .apod{
-    display: flex;
-    gap: 2rem;
-    margin-top: 6.2rem;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 830px) {
+
+  .earth {
+    display: block;
   }
+}
+
+.earthImage {
+  display: grid;
+  place-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.apod {
+  display: flex;
+  gap: 2rem;
+  margin-top: 6.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.apods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}

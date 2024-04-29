@@ -9,6 +9,8 @@ import './Mars.css'
 import MarsCard from '../componets/MarsCard';
 import axios from 'axios';
 import Loader from '../componets/Loader';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const MarsRover = () => {
 
@@ -24,6 +26,10 @@ const MarsRover = () => {
     if (marsData) {
         MarsRover = marsData.photos.slice(0, 20)
     }
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, [])
 
     // useEffect(() => {
     //     const getFormattedDate = () => {
@@ -114,6 +120,7 @@ const MarsRover = () => {
                     <Loader /> // Display loader when loading is true
                 ) : (
                     marsData?.photos?.slice(0, 20)?.map((rover, index) => (
+                        <div data-aos="fade-up">
                         <MarsCard
                             key={index}
                             img_src={rover.img_src}
@@ -124,6 +131,7 @@ const MarsRover = () => {
                             launchingDate={rover.rover.launch_date}
                             status={rover.rover.status}
                         />
+                        </div>
                     ))
                 )}
             </div>

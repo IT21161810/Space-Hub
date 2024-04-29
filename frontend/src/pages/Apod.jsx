@@ -1,12 +1,14 @@
 import { Button, TextField, Typography } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import './Mars.css'
+import Picture from '../componets/Picture'
 
 const Apod = () => {
 
   const [count, setCount] = useState()
   const [Loading, setLoading] = useState(true)
-  const [apodData, setApodData] = useState([])
+  const [apodData, setApodData] = useState()
 
   console.log(apodData)
 
@@ -33,15 +35,16 @@ const Apod = () => {
       })
   }
 
-  useEffect(() => {
-    defaultData()
-  },[])
+  // useEffect(() => {
+  //   defaultData()
+  // }, [])
 
   return (
     <div>
-      <div className='apod'>
-        <div>
-          <Typography variant="subtitle2">Set Image Count</Typography>
+      <div >
+       <div className='apod'>
+       <div>
+          <Typography sx={{marginBottom:'0.5rem'}} variant="subtitle2">Set Astronomy Picture Count</Typography>
           <TextField id="outlined-basic"
             onChange={(e) => setCount(e.target.value)} label="Outlined" variant="outlined" />
         </div>
@@ -50,7 +53,20 @@ const Apod = () => {
             Search
           </Button>
         </div>
-        
+       </div>
+  
+
+      <div className='apods'>
+        {
+          apodData && apodData.map((apod, index) => (
+            <Picture key={index} copyright={apod.copyright}
+              date={apod.date}
+              explanation={apod.explanation}
+              hdurl={apod.hdurl}
+              title={apod.title} />
+          ))
+        }
+      </div>
       </div>
     </div>
   )
