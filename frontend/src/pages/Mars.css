@@ -5,7 +5,7 @@
     justify-content: center;
     gap: 4.6rem;
     align-self: baseline;
-    margin-top: 1.8rem;
+    margin-top: 5.8rem;
 }
 
 @media only screen and (max-width: 560px) {
@@ -45,4 +45,12 @@
     place-items: center;
     margin-top: 2.5rem;
    margin-bottom: 4rem;
+  }
+
+  .apod{
+    display: flex;
+    gap: 2rem;
+    margin-top: 6.2rem;
+    justify-content: center;
+    align-items: center;
   }

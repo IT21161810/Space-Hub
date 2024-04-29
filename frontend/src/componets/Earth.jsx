@@ -14,11 +14,12 @@ export default function Earth({ img_src, planet, date }) {
     };
 
     return (
+        <> 
         <Card sx={{ maxWidth: 1300 }}>
             <CardMedia
                 sx={{ height: 600 }}
                 image={img_src}
-                title="green iguana"
+                title="Earth Imagery API"
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -63,5 +64,6 @@ export default function Earth({ img_src, planet, date }) {
             <CardActions>
             </CardActions>
         </Card>
+        </>
     );
 }

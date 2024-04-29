@@ -4,15 +4,19 @@ import HomePage from '../pages/HomePage';
 import MarsRover from '../pages/MarsRover';
 import EarthImagery from '../pages/EarthImagery';
 import Apod from '../pages/Apod';
+import Register from '../pages/Register';
+import Login from '../pages/Login';
 
 const NasaRoutes = () => {
     return (
         <div>
             <HomePage />
             <Routes>
-                <Route path='/mars' element={<MarsRover/>}/>
-                <Route path='/earth' element={<EarthImagery/>}/>
-                <Route path='/apod' element={<Apod/>} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/mars' element={<MarsRover />} />
+                <Route path='/earth' element={<EarthImagery />} />
+                <Route path='/apod' element={<Apod />} />
             </Routes>
         </div>
     )

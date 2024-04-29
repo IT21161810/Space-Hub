@@ -8,6 +8,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import dayjs from 'dayjs';
 import './Mars.css'
 import Earth from '../componets/Earth';
+import Loader from '../componets/Loader';
 
 const EarthImagery = () => {
 
@@ -16,6 +17,7 @@ const EarthImagery = () => {
   const [lat, setLat] = useState()
   const [dim, setDim] = useState()
   const [startDate, setStartDate] = useState(null)
+  const [Loading, setLoading] = useState(true)
 
   const date = dayjs(startDate).format('YYYY-MM-DD')
 
@@ -26,9 +28,11 @@ const EarthImagery = () => {
   }
 
   const fetchData = async () => {
+    setLoading(true)
     await axios.get(`https://api.nasa.gov/planetary/earth/assets?lon=${lot}&lat=${lat}&date=${date}&dim=${dim}&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd`)
       .then((response) => {
         setEarthImagery(response.data)
+        setLoading(false)
       })
       .catch((err) => {
         console.log(err)
@@ -36,9 +40,11 @@ const EarthImagery = () => {
   }
 
   const defaultData = async () => {
+    setLoading(true)
     await axios.get('https://api.nasa.gov/planetary/earth/assets?lon=100.80&lat=1.8&date=2018-02-08&dim=0.25&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd')
     .then(response => {
       setEarthImagery(response.data)
+      setLoading(false)
     })
     .catch((err) => {
       console.log(err)
@@ -83,8 +89,11 @@ const EarthImagery = () => {
         </div>
       </LocalizationProvider>
       <div className='earthImage'>
-      {earthImagery &&
+      {
+      Loading ? (<Loader/>) : (
+      earthImagery &&
         <Earth img_src={earthImagery.url} planet={earthImagery.resource.planet}  />
+      )
       }
       </div>
     </>
