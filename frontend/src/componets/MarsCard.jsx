@@ -5,29 +5,28 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 
 
-const MarsCard = ({ img_src, fullName,cameraName,roverName,landingDate,launchingDate,status}) => {
+const MarsCard = ({ img_src, fullName, cameraName, roverName, landingDate, launchingDate, status }) => {
 
   return (
-    <Card sx={{ maxWidth: 295}}>
+    <Card sx={{ maxWidth: 295 }}>
       <CardMedia
         component="img"
         height="170"
         image={img_src}
         alt="NASA"
       />
-      <CardContent>
-      <Typography gutterBottom variant="h6" >
+      <CardContent sx={{ lineHeight: '1.2rem' }}>
+        <Typography gutterBottom variant="h6" >
           {fullName}
         </Typography>
-       
-        <Typography variant="body2" color="text.secondary">
-            Camera Name: &nbsp;{cameraName}
+        <Typography variant="body2" color="text.secondary" >
+          Camera Name: &nbsp;{cameraName}
         </Typography>
         <Typography variant='body2' color="text.secondary">
-            Rover Name: &nbsp;{roverName}
+          Rover Name: &nbsp;{roverName}
         </Typography>
         <Typography variant='body2' color="text.secondary">
-            Landing Date: &nbsp;{landingDate}
+          Landing Date: &nbsp;{landingDate}
         </Typography>
         <Typography variant='body2' color="text.secondary">
           Launching Date: &nbsp;{launchingDate}

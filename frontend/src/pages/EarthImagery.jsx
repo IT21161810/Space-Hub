@@ -59,26 +59,26 @@ const EarthImagery = () => {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className='earth'>
           <div>
-            <Typography variant="subtitle2">Start Date</Typography>
+            <Typography variant="subtitle2">Start Date: </Typography>
             <DatePicker
               sx={{ width: '13.9rem' }}
               value={startDate}
               onChange={changeDate} />
           </div>
           <div>
-            <Typography variant="subtitle2">Set Longitude</Typography>
+            <Typography variant="subtitle2">Set Longitude:</Typography>
             <TextField id="outlined-basic"
-              onChange={(e) => steLon(e.target.value)} label="Outlined" variant="outlined" />
+              onChange={(e) => steLon(e.target.value)} label="Enter Longitude" variant="outlined" />
           </div>
           <div>
-            <Typography variant="subtitle2">Set Latitude</Typography>
+            <Typography variant="subtitle2">Set Latitude:</Typography>
             <TextField id="outlined-basic"
-              onChange={(e) => setLat(e.target.value)} label="Outlined" variant="outlined" />
+              onChange={(e) => setLat(e.target.value)} label="Enter Latitude" variant="outlined" />
           </div>
           <div>
-            <Typography variant="subtitle2">Set Degrees</Typography>
+            <Typography variant="subtitle2">Set Degrees:</Typography>
             <TextField id="outlined-basic"
-              onChange={(e) => setDim(e.target.value)} label="Outlined" variant="outlined" />
+              onChange={(e) => setDim(e.target.value)} label="Enter Degress" variant="outlined" />
           </div>
           <div>
             <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.4rem' }} onClick={fetchData}>

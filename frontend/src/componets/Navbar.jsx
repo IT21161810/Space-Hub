@@ -79,6 +79,11 @@ const Navbar = () => {
         </Typography>
         <div style={{ display: 'flex', gap: '1rem' }}>
           <div style={{ display: 'flex',marginLeft:'5rem',gap:'0.8rem'}}>
+          <NavLink to="/" style={{ textDecoration: 'none', color: '#333332' }}>
+              <Button sx={{'&:hover': { backgroundColor: 'black', color: 'white' }, color: location.pathname === '/' ? 'white' : 'black', backgroundColor: location.pathname === '/' ? 'black' : 'transparent' }}>
+                Home
+              </Button>
+            </NavLink>
             <NavLink to="/apod" style={{ textDecoration: 'none', color: '#333332' }}>
               <Button sx={{'&:hover': { backgroundColor: 'black', color: 'white' }, color: location.pathname === '/apod' ? 'white' : 'black', backgroundColor: location.pathname === '/apod' ? 'black' : 'transparent' }}>
                 Apod

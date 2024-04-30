@@ -96,7 +96,7 @@ const MarsRover = () => {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <div className='date-time'>
                     <div>
-                        <Typography variant="subtitle2">Start Date</Typography>
+                        <Typography variant="subtitle2">Start Date:</Typography>
                         <DatePicker
                             sx={{ marginTop: '0.5rem' }}
                             value={startTime}
@@ -104,12 +104,12 @@ const MarsRover = () => {
                             renderInput={(props) => <TextField {...props} error={error && !startTime} />} />
                     </div>
                     <div>
-                        <Typography variant="subtitle2">Enter Sole</Typography>
+                        <Typography variant="subtitle2">Sole:</Typography>
                         <TextField sx={{ marginTop: '0.5rem' }} id="outlined-basic"
-                            onChange={(e) => setSole(e.target.value)} label="Outlined" variant="outlined" />
+                            onChange={(e) => setSole(e.target.value)} label="Enter sole" variant="outlined" />
                     </div>
                     <div>
-                        <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.2rem' }} onClick={defaultData}>
+                        <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.9rem' }} onClick={defaultData}>
                             Search
                         </Button>
                     </div>
