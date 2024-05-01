@@ -1,14 +1,17 @@
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { UserContext } from '../context/AuthContext';
 
 
 const Login = () => {
 
   const history = useNavigate();
+
+  const { setCurrentUser } = useContext(UserContext)
 
   const [userData, setUserData] = useState([{
     email: '',
@@ -23,27 +26,29 @@ const Login = () => {
   }
 
   const userLogin = async () => {
-    await axios.post('http://localhost:5000/user/login', {
-      email: userData.email,
-      password: userData.password
-    }).then((res) => {
-      console.log(res.data)
-    })
-  }
+    try {
+      const res = await axios.post('http://localhost:5000/user/login', {
+        email: userData.email,
+        password: userData.password
+      });
 
-  const handleLogin = (e) => {
+      if (res.status === 200) {
+        setCurrentUser(res.data)
+        toast.success('Login successful');
+        setTimeout(() => history("/home"), 100);
+      } else {
+        toast.error('Error: Unable to login');
+      }
+    } catch (err) {
+      console.error('Login error:', err);
+      toast.error('Error: Unable to login');
+    }
+  };
+
+
+  const handleLogin = async (e) => {
     e.preventDefault()
-    userLogin()
-      .then(toast.success("Login Success", {
-        position: "bottom-right",
-        autoClose: 4000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "light"
-      }))
-      .then(() => history('/'))
+    await userLogin()
   }
 
   return (
@@ -79,7 +84,14 @@ const Login = () => {
             , '&:hover': { backgroundColor: 'black', color: 'white' }, marginTop: '1rem',
             paddingTop: '0.5rem', paddingBottom: '0.5rem'
           }}>Login</Button>
-          <ToastContainer />
+          <ToastContainer autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            theme="light" />
           <Typography variant='body2' sx={{
             display: 'flex',
             marginTop: '1rem',

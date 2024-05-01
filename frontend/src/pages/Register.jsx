@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField, Typography } from '@mui/material'
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,14 +17,23 @@ const Register = () => {
   }])
 
   const userRegister = async () => {
-    await axios.post('http://localhost:5000/user/register', {
-      name: userData.name,
-      email: userData.email,
-      password: userData.password
-    })
-      .then((response) => {
-        console.log(response)
+    try {
+      const response = await axios.post('http://localhost:5000/user/register', {
+        name: userData.name,
+        email: userData.email,
+        password: userData.password
       })
+      if (response.status === 201) {
+        console.log(response)
+        toast.success('Register successful');
+        setTimeout(() => history("/login"), 800);
+      } else {
+        toast.error('Error Register')
+      }
+    } catch (err) {
+      console.error(err)
+      toast.error('Error Register')
+    }
   }
 
   const handleChange = (e) => {
@@ -34,19 +43,9 @@ const Register = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    userRegister()
-      .then(toast.success("Registered Successfully", {
-        position: "bottom-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "light"
-      }))
-      .then(() => history('/login'))
+    await userRegister()
   };
 
   return (

@@ -10,8 +10,9 @@ import Login from '../pages/Login';
 const NasaRoutes = () => {
     return (
         <div>
-            <HomePage />
+
             <Routes>
+                <Route path='/home' element={<HomePage />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/mars' element={<MarsRover />} />

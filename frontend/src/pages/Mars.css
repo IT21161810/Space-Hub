@@ -17,7 +17,6 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* Adjust the column width as needed */
   justify-content: center;
   gap: 1.2rem;
   margin-top: 3.2rem;
@@ -71,6 +70,6 @@
 
 .stack{
   width: 23.3rem;
-  gap: 0.8rem;
+  gap: 1rem;
   margin-top: 3.2rem;
 }
