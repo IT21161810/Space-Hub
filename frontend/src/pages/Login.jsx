@@ -26,28 +26,23 @@ const Login = () => {
     await axios.post('http://localhost:5000/user/login', {
       email: userData.email,
       password: userData.password
+    }).then((res) => {
+      console.log(res.data)
     })
-      .then((response) => {
-        console.log(response)
-        if (response.status === 200) {
-          toast.success("Login Success", {
-            position: "bottom-right",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "light"
-          })
-        }
-      })
   }
-
 
   const handleLogin = (e) => {
     e.preventDefault()
-
     userLogin()
+      .then(toast.success("Login Success", {
+        position: "bottom-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light"
+      }))
       .then(() => history('/'))
   }
 
@@ -84,7 +79,6 @@ const Login = () => {
             , '&:hover': { backgroundColor: 'black', color: 'white' }, marginTop: '1rem',
             paddingTop: '0.5rem', paddingBottom: '0.5rem'
           }}>Login</Button>
-
           <ToastContainer />
           <Typography variant='body2' sx={{
             display: 'flex',

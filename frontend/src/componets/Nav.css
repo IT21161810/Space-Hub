@@ -80,6 +80,9 @@ body {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
+  .nav-elements ul li:last-child {
+    margin-left: 1.1rem;
+  }
 }
 
 @media (max-width: 795px) {
@@ -95,7 +98,7 @@ body {
     background-color: #d7d7d7;
     width: 0px;
     height: 50vh;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
     overflow: hidden;
     padding-left: 1rem;
   }
