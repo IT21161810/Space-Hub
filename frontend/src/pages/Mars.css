@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 4.6rem;
   align-self: baseline;
-  margin-top: 5.8rem;
+  margin-top: 2.2rem;
 }
 
 @media only screen and (max-width: 560px) {
@@ -30,7 +30,7 @@
   align-items: center;
   margin-left: 8.2rem;
   gap: 1rem;
-  margin-top: 6.5rem;
+  margin-top: 2.5rem;
 }
 
 @media only screen and (max-width: 830px) {
@@ -50,7 +50,7 @@
 .apod {
   display: flex;
   gap: 2rem;
-  margin-top: 6.2rem;
+  margin-top: 2.2rem;
   justify-content: center;
   align-items: center;
 }
@@ -61,4 +61,16 @@
   justify-content: center;
   margin-top: 2rem;
   gap: 2rem;
+}
+
+.reg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack{
+  width: 23.3rem;
+  gap: 0.8rem;
+  margin-top: 3.2rem;
 }

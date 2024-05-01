@@ -77,7 +77,7 @@ const MarsRover = () => {
     const defaultData = async () => {
         setLoading(true)
         await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?
-        earth_date=2015-6-3&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&sol=1000`)
+        earth_date=2020-5-10&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&sol=100.8`)
             .then((response) => {
                 setMarsData(response.data)
                 setLoading(false)
@@ -109,7 +109,7 @@ const MarsRover = () => {
                             onChange={(e) => setSole(e.target.value)} label="Enter sole" variant="outlined" />
                     </div>
                     <div>
-                        <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.9rem' }} onClick={defaultData}>
+                        <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.9rem' }} onClick={FetchAPIData}>
                             Search
                         </Button>
                     </div>
