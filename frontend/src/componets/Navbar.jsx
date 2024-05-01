@@ -27,7 +27,7 @@ const Navbar = () => {
     toast.success('Logout successful');
   }
   return (
-    <nav className="navbar">
+    <nav className="navbar" style={{backgroundColor:'#dcdbdb'}}>
       <div className="container">
         <div className="logo">
           <img src={Brand} alt="Menu" style={{ width: '4.4rem', height: '3.8rem' }} />

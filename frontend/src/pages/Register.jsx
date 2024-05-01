@@ -43,15 +43,15 @@ const Register = () => {
     }))
   }
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     await userRegister()
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Box className='reg'>
-        <Stack className='stack'>
+    <form onSubmit={handleSubmit} className='reg'>
+      <Box className='reg' sx={{marginTop: '2rem', borderRadius: '1.5rem' }}>
+        <Stack className='log-stack'>
           <Typography variant='h5' sx={{
             marginBottom: '1rem',
             display: 'flex', alignItems: 'center', justifyContent: 'center'
@@ -89,12 +89,13 @@ const Register = () => {
 
           <Button type="submit" sx={{
             backgroundColor: '#1f2e2e', color: 'white'
-            , '&:hover': { backgroundColor: 'black', color: 'white' }, marginTop: '1rem', paddingTop: '0.5rem', paddingBottom: '0.5rem'
+            , '&:hover': { backgroundColor: 'black', color: 'white' }, marginTop: '1rem',
+            paddingTop: '0.5rem', paddingBottom: '0.5rem'
           }}>Register</Button>
           <ToastContainer />
           <Typography variant='body2' sx={{
             display: 'flex',
-            marginTop: '1rem',
+            marginTop: '0.5rem',
             alignItems: 'center', justifyContent: 'center'
           }} >
             Already have an account? &nbsp;&nbsp;<Link style={{ textDecoration: 'none' }} to='/login'>Login here</Link></Typography>

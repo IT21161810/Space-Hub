@@ -52,9 +52,10 @@ const Login = () => {
   }
 
   return (
-    <form onSubmit={handleLogin}>
-      <Box className='reg'>
-        <Stack className='stack'>
+    <div > 
+    <form onSubmit={handleLogin} >
+      <Box className='reg' sx={{marginTop:'2rem',borderRadius:'1.6rem'}}>
+        <Stack className='reg-stack' >
           <Typography variant='h5' sx={{
             marginBottom: '1rem', display: 'flex',
             alignItems: 'center', justifyContent: 'center'
@@ -94,7 +95,7 @@ const Login = () => {
             theme="light" />
           <Typography variant='body2' sx={{
             display: 'flex',
-            marginTop: '1rem',
+            marginTop: '0.5rem',
             alignItems: 'center', justifyContent: 'center'
           }} >
             Don't have an account? &nbsp;&nbsp;<Link style={{ textDecoration: 'none' }}
@@ -102,6 +103,7 @@ const Login = () => {
         </Stack>
       </Box>
     </form>
+    </div>
   )
 }
 

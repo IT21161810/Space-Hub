@@ -6,12 +6,13 @@ import EarthImagery from '../pages/EarthImagery';
 import Apod from '../pages/Apod';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
+import LandingPage from '../pages/LandingPage';
 
 const NasaRoutes = () => {
     return (
         <div>
-
             <Routes>
+                <Route path='/' element={<LandingPage/>}/>
                 <Route path='/home' element={<HomePage />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />

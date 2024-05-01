@@ -14,6 +14,7 @@
   }
 }
 
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -68,8 +69,21 @@
   justify-content: center;
 }
 
-.stack{
+.log-stack{
   width: 23.3rem;
   gap: 1rem;
-  margin-top: 3.2rem;
+  margin-top: 2.8rem;
+  background-color: rgb(213, 212, 212);
+  padding: 1rem 1.5rem;
+  border-radius:1.5rem;
+}
+
+
+.reg-stack{
+  width: 23.3rem;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  background-color: rgb(213, 212, 212);
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
 }
