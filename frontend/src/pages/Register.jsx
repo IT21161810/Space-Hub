@@ -82,6 +82,7 @@ const Register = () => {
             id="demo-helper-text-aligned"
             label="Password"
             name='password'
+            position='bottom-right'
             onChange={handleChange}
             value={userData.password}
             required
