@@ -2,6 +2,7 @@ import React from 'react'
 import space from '../assets/space.jpeg'
 import bannerBg from '../assets/banner-bg.png'
 import colorBg from '../assets/color-sharp.png'
+import SpaceGuy from '../assets/header-img.svg'
 import './home.css'
 
 const LandingPage = () => {
@@ -16,6 +17,7 @@ const LandingPage = () => {
                 </p>
                 <a href='/login'>Let's Explore</a>
             </div>
+            <img src={SpaceGuy} alt='Space Guy' className='space'/>
         </section>
     )
 }

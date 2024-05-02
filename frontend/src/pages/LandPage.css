@@ -1,0 +1,69 @@
+
+
+.heros{
+    display: flex;
+    height: 100vh;
+    background-image: url('../assets/banner-bg.png');
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+}
+
+
+.contents{
+    border: 1px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2.3rem;
+    align-items:center;
+    color: white;
+}
+
+.contents h1 {
+    font-size: 56px;
+    font-weight: bolder;
+}
+
+.contents h2 {
+    color: rgb(218, 218, 218);
+}
+
+.contents p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-align: justify;
+    color: rgb(218, 218, 218);
+    margin-left: 2.9rem;
+    margin-top: 2.4rem;
+}
+
+.contents a{
+    color: inherit;
+    text-decoration: none;
+    background-color: blueviolet;
+    padding: 12px 24px;
+    font-size: 22px;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+}
+
+.homeCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+
+.oneCard{
+    cursor: pointer;
+    box-shadow: 0 4px 6px 0 rgb(156, 177, 226), 0 6px 18px 0 rgba(73, 101, 237, 0.19);
+}
+
+.oneCard:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 12px 0 rgb(153, 181, 246), 0 10px 25px 0 rgba(64, 82, 176, 0.19);
+}

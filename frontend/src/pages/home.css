@@ -30,11 +30,12 @@
 }
 
 .content p {
-    font-size: 22px;
+    font-size: 20px;
     margin: 15px 0;
     max-width: 750px;
     letter-spacing: 2px;
     text-align: start;
+    color: rgb(221, 217, 217);
 }
 
 .content a{
@@ -45,4 +46,9 @@
     font-size: 22px;
     margin-top: 1.5rem;
     border-radius: 5px;
+}
+
+.space{
+    width: 35%;
+    height: auto;
 }
