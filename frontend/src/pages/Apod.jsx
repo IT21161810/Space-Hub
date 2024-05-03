@@ -42,16 +42,21 @@ const Apod = () => {
   }, [])
 
   return (
-    <div>
+    <div className='apodPage'>
       <div >
         <div className='apod'>
           <div>
-            <Typography sx={{ marginBottom: '0.5rem' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
-            <TextField id="outlined-basic"
-              onChange={(e) => setCount(e.target.value)} label="Outlined" variant="outlined" />
+            <Typography sx={{ marginBottom: '0.5rem',color:'white' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
+            <TextField placeholder='Enter count'
+            sx={{backgroundColor:'white',borderRadius:'4px'}}
+              onChange={(e) => setCount(e.target.value)} label="" variant="outlined" />
           </div>
           <div>
-            <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.9rem' }} onClick={fetchData}>
+            <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem',
+            marginTop: '1.9rem',color:'black',backgroundColor:'white',
+            '&:hover': { border:'solid 1px white',backgroundColor:'white'},
+            border:'solid 2px white'}}
+            onClick={fetchData}>
               Search
             </Button>
           </div>

@@ -96,20 +96,24 @@ const MarsRover = () => {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <div className='date-time'>
                     <div>
-                        <Typography variant="subtitle2">Start Date:</Typography>
+                        <Typography variant="subtitle2" sx={{ color: 'white' }}>Start Date:</Typography>
                         <DatePicker
-                            sx={{ marginTop: '0.5rem' }}
+                            sx={{ marginTop: '0.5rem', border: 'solid 1px white', borderRadius: '4px', backgroundColor: 'white' }}
                             value={startTime}
                             onChange={handleStartTimeChange}
                             renderInput={(props) => <TextField {...props} error={error && !startTime} />} />
                     </div>
                     <div>
-                        <Typography variant="subtitle2">Sole:</Typography>
-                        <TextField sx={{ marginTop: '0.5rem' }} id="outlined-basic"
+                        <Typography variant="subtitle2" sx={{ color: 'white' }}>Sole:</Typography>
+                        <TextField sx={{ marginTop: '0.5rem', borderRadius: '4px', border: 'solid 1px white', backgroundColor: 'white' }} id="outlined-basic"
                             onChange={(e) => setSole(e.target.value)} label="Enter sole" variant="outlined" />
                     </div>
                     <div>
-                        <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem', marginTop: '1.9rem' }} onClick={FetchAPIData}>
+                        <Button variant="outlined" sx={{
+                            padding: '0.7rem 1.5rem',
+                            '&:hover': { backgroundColor: 'white' }, color: 'black',
+                            backgroundColor: 'white', marginTop: '1.9rem'
+                        }} onClick={FetchAPIData}>
                             Search
                         </Button>
                     </div>
@@ -121,16 +125,16 @@ const MarsRover = () => {
                 ) : (
                     marsData?.photos?.slice(0, 20)?.map((rover, index) => (
                         <div data-aos="fade-up">
-                        <MarsCard
-                            key={index}
-                            img_src={rover.img_src}
-                            fullName={rover.camera.full_name}
-                            cameraName={rover.camera.name}
-                            roverName={rover.rover.name}
-                            landingDate={rover.rover.landing_date}
-                            launchingDate={rover.rover.launch_date}
-                            status={rover.rover.status}
-                        />
+                            <MarsCard
+                                key={index}
+                                img_src={rover.img_src}
+                                fullName={rover.camera.full_name}
+                                cameraName={rover.camera.name}
+                                roverName={rover.rover.name}
+                                landingDate={rover.rover.landing_date}
+                                launchingDate={rover.rover.launch_date}
+                                status={rover.rover.status}
+                            />
                         </div>
                     ))
                 )}

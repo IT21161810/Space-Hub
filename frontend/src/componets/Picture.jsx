@@ -16,7 +16,7 @@ const Picture = ({ copyright, date, explanation, hdurl, title }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 455 }}>
+    <Card sx={{ maxWidth: 455, backgroundColor:'#898b8c'}}>
       <CardMedia
         sx={{ height: 290 }}
         component="img"

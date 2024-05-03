@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../context/AuthContext';
 import Snackbar from '@mui/material/Snackbar';
-
+import './User.css'
 
 const Login = () => {
 
@@ -65,7 +65,7 @@ const Login = () => {
   }
 
   return (
-    <div >
+    <div className='loginPage'>
       <form onSubmit={handleLogin} >
         <Box className='reg' sx={{ marginTop: '2rem', borderRadius: '1.6rem' }}>
           <Stack className='reg-stack' >

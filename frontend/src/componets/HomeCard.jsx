@@ -23,7 +23,7 @@ const HomeCard = ({ title, img, description, path }) => {
                 alt={title}
               />
               <CardContent>
-                <Typography gutterBottom variant="subtitle2" >
+                <Typography gutterBottom variant="subtitle2" sx={{fontWeight:700,marginBottom:'0.7rem'}}>
                   {title}
                 </Typography>
                 <Typography variant="caption">

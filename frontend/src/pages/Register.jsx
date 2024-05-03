@@ -4,7 +4,8 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import spaceBg from '../assets/footer-bg.png'
+import './Mars.css'
 
 const Register = () => {
 
@@ -49,6 +50,7 @@ const Register = () => {
   };
 
   return (
+    <div className='regPage'>
     <form onSubmit={handleSubmit} className='reg'>
       <Box className='reg' sx={{marginTop: '2rem', borderRadius: '1.5rem' }}>
         <Stack className='log-stack'>
@@ -102,8 +104,8 @@ const Register = () => {
             Already have an account? &nbsp;&nbsp;<Link style={{ textDecoration: 'none' }} to='/login'>Login here</Link></Typography>
         </Stack>
       </Box>
-
     </form>
+    </div>
   )
 }
 
