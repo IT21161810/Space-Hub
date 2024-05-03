@@ -59,26 +59,26 @@ const EarthImagery = () => {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <div className='earth'>
           <div>
-            <Typography variant="subtitle2" sx={{color:'white'}} >Start Date: </Typography>
+            <Typography variant="subtitle2"  >Start Date: </Typography>
             <DatePicker
               sx={{ width: '13.9rem',border:'solid 1px white',borderRadius:'4px',backgroundColor:'white' }}
               value={startDate}
               onChange={changeDate} />
           </div>
           <div>
-            <Typography variant="subtitle2" sx={{color:'white'}}>Set Longitude:</Typography>
+            <Typography variant="subtitle2" >Set Longitude:</Typography>
             <TextField id="outlined-basic"
               sx={{ width: '13.9rem',borderRadius:'4px',border:'solid 1px white',backgroundColor:'white' }}
               onChange={(e) => steLon(e.target.value)} label="Enter Longitude" variant="outlined" />
           </div>
           <div>
-            <Typography variant="subtitle2" sx={{color:'white'}}>Set Latitude:</Typography>
+            <Typography variant="subtitle2" >Set Latitude:</Typography>
             <TextField id="outlined-basic"
               sx={{ width: '13.9rem',borderRadius:'4px',border:'solid 1px white',backgroundColor:'white' }}
               onChange={(e) => setLat(e.target.value)} label="Enter Latitude" variant="outlined" />
           </div>
           <div>
-            <Typography variant="subtitle2" sx={{color:'white'}}>Set Degrees:</Typography>
+            <Typography variant="subtitle2">Set Degrees:</Typography>
             <TextField id="outlined-basic"
               sx={{ width: '13.9rem',border:'solid 1px white',borderRadius:'4px',backgroundColor:'white' }}
               onChange={(e) => setDim(e.target.value)} label="Enter Degress" variant="outlined" />

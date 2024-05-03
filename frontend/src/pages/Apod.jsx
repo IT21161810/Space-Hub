@@ -6,12 +6,12 @@ import Picture from '../componets/Picture'
 import Loader from '../componets/Loader'
 
 const Apod = () => {
-
+  
   const [count, setCount] = useState()
   const [Loading, setLoading] = useState(true)
   const [apodData, setApodData] = useState()
 
-  console.log(apodData)
+  console.log(import.meta.env.VITE_KEY)
 
   const fetchData = async () => {
     setLoading(true)
@@ -46,7 +46,7 @@ const Apod = () => {
       <div >
         <div className='apod'>
           <div>
-            <Typography sx={{ marginBottom: '0.5rem',color:'white' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
+            <Typography sx={{ marginBottom: '0.5rem' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
             <TextField placeholder='Enter count'
             sx={{backgroundColor:'white',borderRadius:'4px'}}
               onChange={(e) => setCount(e.target.value)} label="" variant="outlined" />
@@ -54,8 +54,8 @@ const Apod = () => {
           <div>
             <Button variant="outlined" sx={{ padding: '0.7rem 1.5rem',
             marginTop: '1.9rem',color:'black',backgroundColor:'white',
-            '&:hover': { border:'solid 1px white',backgroundColor:'white'},
-            border:'solid 2px white'}}
+            '&:hover': { border:'solid 1px black',backgroundColor:'white'},
+            border:'solid 2px black'}}
             onClick={fetchData}>
               Search
             </Button>
