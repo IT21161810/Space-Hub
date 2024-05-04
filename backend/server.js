@@ -13,7 +13,7 @@ app.use('/user',userRoutes)
 
 //database connection
 mongoose.connect(process.env.MONGO_URL)
-    .then(() => app.listen(5000))
+    .then(() => app.listen(process.env.PORT))
     .then(() => console.log("Database is Connected"))
     .catch((err) => console.log(err));
 
