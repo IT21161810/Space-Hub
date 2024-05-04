@@ -34,9 +34,7 @@ describe('Picture Component', () => {
         ...sampleProps,
         copyright: null
       };
-  
       render(<Picture {...propsWithoutCopyright} />);
-
       expect(screen.getByText('Copyright: No Copyright')).toBeInTheDocument();
     });
   });

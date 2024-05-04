@@ -59,17 +59,29 @@ git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 - eslint-plugin-react-refresh (^0.4.6): ESLint plugin for React Fast Refresh.
 - vite (^5.2.0): Frontend build tool that serves web pages with React fast.
 
+## Dev Testing Dependency
+- @testing-library/jest-dom: This library extends Jest's expect with a set of custom matchers for the DOM elements.
+- @testing-library/react: This library provides utilities for testing React components in a way that encourages good testing practices.
+- @testing-library/user-event: Simulate events the way the user does. This library provides utilities for interacting with components.
+- jsdom: A JavaScript implementation of various web standards, particularly the WHATWG DOM and HTML Standards
+- vitest: A lightweight testing utility built specifically for Vite projects
+  
 
-## NASA API USED
+# NASA API USED
 
-# APOD
+## APOD
 
 One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. It has the popular appeal of a Justin Bieber video
 
-# Mars Rover Photos
+## Mars Rover Photos
 
 This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists. This API is maintained by Chris Cerami.
 
-# Earth Imagery API
+## Earth Imagery API
 
 Landsat imagery is provided to the public as a joint project between NASA and USGS. A recent industry report on landsat satellite imagery data estimates that total annual value to the economy of $2.19 billion, far exceeding the multi-year total cost of building, launching,
+
+## How to run Test cases
+
+- Run All Test cases      - npm test
+- Run Specific Test cases - npm test Picture.tes.jsx
