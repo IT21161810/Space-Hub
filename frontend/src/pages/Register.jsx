@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import spaceBg from '../assets/footer-bg.png'
 import './Mars.css'
+import { BASE_URL } from '../BaseUrl/BaseUrl';
 
 const Register = () => {
 
@@ -19,7 +20,7 @@ const Register = () => {
 
   const userRegister = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/user/register', {
+      const response = await axios.post(`${BASE_URL}/user/register`, {
         name: userData.name,
         email: userData.email,
         password: userData.password

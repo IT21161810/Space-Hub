@@ -7,9 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { UserContext } from '../context/AuthContext';
 import Snackbar from '@mui/material/Snackbar';
 import './User.css'
+import { BASE_URL } from '../BaseUrl/BaseUrl';
+
 
 const Login = () => {
-
+  
   const history = useNavigate();
   const [open, setOpen] = React.useState(false);
 
@@ -40,7 +42,7 @@ const Login = () => {
 
   const userLogin = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/user/login', {
+      const res = await axios.post(`${BASE_URL}/user/login`, {
         email: userData.email,
         password: userData.password
       });
