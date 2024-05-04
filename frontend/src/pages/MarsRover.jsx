@@ -23,6 +23,8 @@ const MarsRover = () => {
 
     let MarsRover = []
 
+    console.log(marsData)
+
     if (marsData) {
         MarsRover = marsData.photos.slice(0, 20)
     }
@@ -56,9 +58,9 @@ const MarsRover = () => {
     const start = dayjs(startTime).format('YYYY-MM-DD')
     const end = dayjs(endTime).format('YYYY-MM-DD')
 
-    const handleExpandClick = (index) => {
-        setExpandedIndex(index === expandedIndex ? -1 : index);
-    };
+    // const handleExpandClick = (index) => {
+    //     setExpandedIndex(index === expandedIndex ? -1 : index);
+    // };
 
     const FetchAPIData = async () => {
         setLoading(true)
@@ -92,11 +94,11 @@ const MarsRover = () => {
     }, [])
 
     return (
-        <>
+        <div className='rover'>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <div className='date-time'>
                     <div>
-                        <Typography variant="subtitle2" setStartTime>Start Date:</Typography>
+                        <Typography variant="subtitle2" style={{color:'white'}}>Start Date:</Typography>
                         <DatePicker
                             sx={{ marginTop: '0.5rem', border: 'solid 1px white', borderRadius: '4px', backgroundColor: 'white' }}
                             value={startTime}
@@ -104,7 +106,7 @@ const MarsRover = () => {
                             renderInput={(props) => <TextField {...props} error={error && !startTime} />} />
                     </div>
                     <div>
-                        <Typography variant="subtitle2">Sole:</Typography>
+                        <Typography variant="subtitle2" style={{color:'white'}}>Sole:</Typography>
                         <TextField sx={{ marginTop: '0.5rem', borderRadius: '4px', border: 'solid 1px white', backgroundColor: 'white' }} id="outlined-basic"
                             onChange={(e) => setSole(e.target.value)} label="Enter sole" variant="outlined" />
                     </div>
@@ -139,7 +141,7 @@ const MarsRover = () => {
                     ))
                 )}
             </div>
-        </>
+        </div>
     );
 };
 

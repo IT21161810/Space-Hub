@@ -17,9 +17,17 @@ body {
 
 .navbar {
   height: 60px;
-  background-color: #fbfbfb;
   position: relative;
-  background-color: transparent;
+  background: rgb(37, 88, 236);
+  background: linear-gradient(90deg, rgba(37, 88, 236, 1) 0%, rgba(2, 98, 94, 0.9512255585828081) 80%);
+  transition: top 0.3s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
 }
 
 .logo {
@@ -48,6 +56,11 @@ body {
   justify-content: space-between;
   list-style-type: none;
 }
+
+.nav-elements li{
+  color: #e9e9eb;
+}
+
 
 .nav-elements ul li:not(:last-child) {
   margin-right: 10px;
@@ -80,12 +93,14 @@ body {
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
   }
+
   .nav-elements ul li:last-child {
     margin-left: 1.1rem;
   }
 }
 
 @media (max-width: 795px) {
+
   .menu-icon {
     display: block;
     cursor: pointer;
@@ -98,6 +113,7 @@ body {
     background-color: #d7d7d7;
     width: 0px;
     height: 50vh;
+    z-index: 500;
     transition: all 0.2s ease-in;
     overflow: hidden;
     padding-left: 1rem;

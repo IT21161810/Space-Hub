@@ -46,9 +46,9 @@ const Apod = () => {
       <div >
         <div className='apod'>
           <div>
-            <Typography sx={{ marginBottom: '0.5rem' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
+            <Typography sx={{ marginBottom: '0.5rem',color:'white' }} variant="subtitle2">Set Astronomy Picture Count: </Typography>
             <TextField placeholder='Enter count'
-            sx={{backgroundColor:'white',borderRadius:'4px'}}
+               sx={{backgroundColor:'white',borderRadius:'4px',width:'300px'}}
               onChange={(e) => setCount(e.target.value)} label="" variant="outlined" />
           </div>
           <div>
