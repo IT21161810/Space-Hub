@@ -11,6 +11,7 @@ const Picture = ({ copyright, date, explanation, hdurl, title }) => {
 
   const [expanded, setExpanded] = React.useState(false);
 
+  //toggle see more and show less
   const toggleExpanded = () => {
     setExpanded(!expanded);
   };

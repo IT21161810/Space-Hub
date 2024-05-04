@@ -2,7 +2,7 @@
 
 ## React Js Frontend
 
-- This is the Node Js backend for a University Timetable management System
+- This is the React Website for display NASA API data and allows user to interact with NASA APIs
 
 ## 1.Installation
 
@@ -58,3 +58,18 @@ git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 - eslint-plugin-react-hooks (^4.6.0): ESLint rules for React hooks.
 - eslint-plugin-react-refresh (^0.4.6): ESLint plugin for React Fast Refresh.
 - vite (^5.2.0): Frontend build tool that serves web pages with React fast.
+
+
+## NASA API USED
+
+# APOD
+
+One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. It has the popular appeal of a Justin Bieber video
+
+# Mars Rover Photos
+
+This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists. This API is maintained by Chris Cerami.
+
+# Earth Imagery API
+
+Landsat imagery is provided to the public as a joint project between NASA and USGS. A recent industry report on landsat satellite imagery data estimates that total annual value to the economy of $2.19 billion, far exceeding the multi-year total cost of building, launching,
