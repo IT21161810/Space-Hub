@@ -15,7 +15,7 @@ export default function Earth({ img_src, planet, date }) {
 
     return (
         <>
-            <Card sx={{ maxWidth: 1300, backgroundColor: '#898b8c' }}>
+            <Card sx={{ maxWidth: 1300, backgroundColor: '#898b8c',border:'solid 2px white',marginBottom:'8rem' }}>
                 <CardMedia
                     sx={{ height: 600 }}
                     image={img_src}

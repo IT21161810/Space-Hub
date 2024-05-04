@@ -4,13 +4,21 @@
 
 - This is the React Website for display NASA API data and allows user to interact with NASA APIs
 
+## Node Js Backend
+
+- Backend for handle User Session management with JWT Authentication
+- 
 ## 1.Installation
 
 git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 
 ## 2. Install dependencies:
 
-- npm install/npm i
+- Move to backend folder
+  - npm install/npm i
+  
+- Move to frontend folder
+  - npm install/npm i
 
 ## 3. Create a .env file in the root directory and add the necessary environment variables. Example:
 
@@ -18,10 +26,24 @@ git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 
 ## Usage
 
+   ## frontend
+
 - Start the VITE APP: npm run dev
 - The server will start on the (http://localhost:5173/)
 
-## Folder Structure
+   ## backend
+- start Backend serve using npm start
+- The server will start on port 3000
+  
+## Folder Structure Backend
+
+- controller: Contains controller functions for handling API requests.
+- routes: Contains API routes.
+- models: Contains Mongoose models for database entities.
+- middleware: Contains authenticating authorization middlewares
+- test: Contains unit test cases for API controllers.
+
+## Folder Structure Frontend
 
 - Components: all the components of web page Header Footer Navbar .
 - Context: Auth context relate to persist user current user.
@@ -29,7 +51,7 @@ git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 - Routes: all the routes and pages of application
 - Services: All API services
   
-## Dependencies
+## Dependencies Frontend
 - @emotion/react (^11.11.4): A library for writing CSS styles with JavaScript and React.
 - @emotion/styled (^11.11.5): A library for styling React components with Emotion.
 - @material-ui/core (^4.12.4): React components for faster and easier web development.
@@ -66,6 +88,19 @@ git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
 - jsdom: A JavaScript implementation of various web standards, particularly the WHATWG DOM and HTML Standards
 - vitest: A lightweight testing utility built specifically for Vite projects
   
+
+## Dependencies Backend
+
+- bcryptjs: Library for hashing passwords.
+- cors: Middleware for enabling Cross-Origin Resource Sharing (CORS).
+- date-fns: Library for working with dates in JavaScript.
+- dotenv: Library for loading environment variables from a .env file.
+- express: Web framework for Node.js.
+- jsonwebtoken: Library for generating and verifying JSON Web Tokens (JWT).
+- mongoose: MongoDB object modeling tool.
+- nodemon: Utility for automatically restarting the server during development.
+
+
 
 # NASA API USED
 

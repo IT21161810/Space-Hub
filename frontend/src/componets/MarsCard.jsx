@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 const MarsCard = ({ img_src, fullName, cameraName, roverName, landingDate, launchingDate, status }) => {
 
   return (
-    <Card sx={{ maxWidth: 295, backgroundColor: '#898b8c' }}>
+    <Card sx={{ maxWidth: 299, backgroundColor: '#898b8c',border:'solid 2px white' }}>
       <CardMedia
         component="img"
         height="170"
