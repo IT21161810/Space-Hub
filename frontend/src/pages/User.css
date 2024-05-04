@@ -1,0 +1,99 @@
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.6rem;
+  align-self: baseline;
+  margin-top: 2.2rem;
+}
+
+@media only screen and (max-width: 560px) {
+
+  .date-time {
+    display: block;
+  }
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 3.2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.earth {
+  display: flex;
+  align-items: center;
+  margin-left: 8.2rem;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 830px) {
+
+  .earth {
+    display: block;
+  }
+}
+
+.earthImage {
+  display: grid;
+  place-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.apod {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.apods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-stack {
+  width: 23.3rem;
+  gap: 1rem;
+  margin-top: 2.8rem;
+  background-color: rgb(213, 212, 212);
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+}
+
+
+.reg-stack {
+  width: 23.3rem;
+  gap: 1rem;
+  margin-top: 2.4rem;
+  background-color: rgb(213, 212, 212);
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.loginPage {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  /* background-image: url('../assets/footer-bg.png'); */
+  /* background-color: rgb(4, 54, 98);
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5); */
+}
+
