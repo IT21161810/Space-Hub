@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 export default function Earth({ img_src, planet, date }) {
     const [expanded, setExpanded] = React.useState(false);
 
-    const toggleExpanded = () => {
+    const toggleExpanded = () => { //toggle the button
         setExpanded(!expanded);
     };
 

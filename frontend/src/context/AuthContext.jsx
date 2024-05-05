@@ -6,10 +6,10 @@ export const UserContext = createContext() //create a Context Object
 
 const AuthContext = ({ children }) => {
 
-    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")))
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user"))) //get current user
 
     useEffect(() => {
-        localStorage.setItem("user", JSON.stringify(currentUser))
+        localStorage.setItem("user", JSON.stringify(currentUser)) //save current user
     }, [currentUser])
 
     return <UserContext.Provider value={{ currentUser, setCurrentUser }}>

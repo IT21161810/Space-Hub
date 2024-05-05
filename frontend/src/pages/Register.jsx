@@ -18,6 +18,7 @@ const Register = () => {
     password: ''
   }])
 
+  //register a user
   const userRegister = async () => {
     try {
       const response = await axios.post(`${BASE_URL}/user/register`, {

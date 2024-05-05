@@ -33,7 +33,8 @@ const Login = () => {
     password: ''
   }])
 
-  const handleChange = (e) => {
+  /*value bind with name*/
+  const handleChange = (e) => { 
     setUserData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value
