@@ -120,3 +120,15 @@ Landsat imagery is provided to the public as a joint project between NASA and US
 
 - Run All Test cases      - npm test
 - Run Specific Test cases - npm test Picture.tes.jsx
+
+# Deployment
+
+## frontend
+- run 'npm build'
+- move created dist file to netlify
+  
+- deploy link: https://heartfelt-dieffenbachia-a7b2a0.netlify.app
+
+## backend
+- backend deployed on render
+- backend deployed link: https://space-hub-2.onrender.com
