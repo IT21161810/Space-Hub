@@ -33,34 +33,12 @@ const MarsRover = () => {
         Aos.init({ duration: 2000 })
     }, [])
 
-    // useEffect(() => {
-    //     const getFormattedDate = () => {
-    //         const today = new Date();
-    //         const year = today.getFullYear();
-    //         const month = String(today.getMonth() + 1).padStart(2, '0');
-    //         const day = String(today.getDate()).padStart(2, '0');
-    //         return `${year}-${month}-${day}`;
-    //     };
-    //     setTodayDate(getFormattedDate());
-    // }, []);
-
-
-    // let neoObjectsForDate
-    // if (marsData) {
-    //     neoObjectsForDate = marsData.near_earth_objects[startTime ? startTime : todayDate];
-    //     console.log(neoObjectsForDate.slice(0, 8))
-    // }
-
     const handleStartTimeChange = (date) => {
         setStartTime(date);
     };
 
     const start = dayjs(startTime).format('YYYY-MM-DD')
     const end = dayjs(endTime).format('YYYY-MM-DD')
-
-    // const handleExpandClick = (index) => {
-    //     setExpandedIndex(index === expandedIndex ? -1 : index);
-    // };
 
     const FetchAPIData = async () => {
         setLoading(true)
