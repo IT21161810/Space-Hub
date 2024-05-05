@@ -3,11 +3,14 @@
 ## React Js Frontend
 
 - This is the React Website for display NASA API data and allows user to interact with NASA APIs
+- create vite app: npm create vite@latest
 
 ## Node Js Backend
 
 - Backend for handle User Session management with JWT Authentication
-- 
+- add you DB url to .env
+- add JWT secret to .env
+  
 ## 1.Installation
 
 git clone https://github.com/sliitcsse/se3040-assignment02-IT21161810.git
@@ -118,8 +121,12 @@ Landsat imagery is provided to the public as a joint project between NASA and US
 
 ## How to run Test cases
 
+Testing were done by React testing library vitest and jsdom
+
+How to run test cases:
+
 - Run All Test cases      - npm test
-- Run Specific Test cases - npm test Picture.tes.jsx
+- Run Specific Test cases - npm test APOD.test.jsx
 
 # Deployment
 
