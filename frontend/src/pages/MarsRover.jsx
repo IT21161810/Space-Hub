@@ -11,6 +11,7 @@ import axios from 'axios';
 import Loader from '../componets/Loader';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import {API_KEY} from '../API'
 
 const MarsRover = () => {
 
@@ -43,7 +44,7 @@ const MarsRover = () => {
     const FetchAPIData = async () => {
         setLoading(true)
         await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?
-            earth_date=${startTime}&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&sol=${sol}`)
+            earth_date=${startTime}&api_key=${API_KEY}&sol=${sol}`)
             .then((response) => {
                 setMarsData(response.data)
                 setLoading(false)
@@ -57,7 +58,7 @@ const MarsRover = () => {
     const defaultData = async () => {
         setLoading(true)
         await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?
-        earth_date=2020-5-10&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&sol=100.8`)
+        earth_date=2020-5-10&api_key=${API_KEY}&sol=100.8`)
             .then((response) => {
                 setMarsData(response.data)
                 setLoading(false)

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import './Mars.css'
 import Picture from '../componets/Picture'
 import Loader from '../componets/Loader'
+import {API_KEY} from '../API'
 
 const Apod = () => {
   
@@ -15,7 +16,7 @@ const Apod = () => {
 
   const fetchData = async () => {
     setLoading(true)
-    await axios.get(`https://api.nasa.gov/planetary/apod?api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&count=${count}`)
+    await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${count}`)
       .then((response) => {
         setApodData(response.data)
         setLoading(false)
@@ -27,7 +28,7 @@ const Apod = () => {
 
   const defaultData = async () => {
     setLoading(true)
-    await axios.get(`https://api.nasa.gov/planetary/apod?api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd&count=${6}`)
+    await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=${6}`)
       .then((response) => {
         setApodData(response.data)
         setLoading(false)

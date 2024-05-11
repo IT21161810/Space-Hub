@@ -9,6 +9,8 @@ import dayjs from 'dayjs';
 import './Mars.css'
 import Earth from '../componets/Earth';
 import Loader from '../componets/Loader';
+import { API_KEY } from '../API';
+
 
 const EarthImagery = () => {
 
@@ -29,7 +31,7 @@ const EarthImagery = () => {
 
   const fetchData = async () => {
     setLoading(true)
-    await axios.get(`https://api.nasa.gov/planetary/earth/assets?lon=${lot}&lat=${lat}&date=${date}&dim=${dim}&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd`)
+    await axios.get(`https://api.nasa.gov/planetary/earth/assets?lon=${lot}&lat=${lat}&date=${date}&dim=${dim}&api_key=${API_KEY}`)
       .then((response) => {
         setEarthImagery(response.data)
         setLoading(false)
@@ -41,7 +43,7 @@ const EarthImagery = () => {
 
   const defaultData = async () => {
     setLoading(true)
-    await axios.get('https://api.nasa.gov/planetary/earth/assets?lon=100.80&lat=1.8&date=2018-02-08&dim=0.25&api_key=3jQMjnxVQV8vaH1wlg3e2mtM13v7dAebMA4aekZd')
+    await axios.get(`https://api.nasa.gov/planetary/earth/assets?lon=100.80&lat=1.8&date=2018-02-05&dim=0.25&api_key=${API_KEY}`)
     .then(response => {
       setEarthImagery(response.data)
       setLoading(false)
@@ -78,7 +80,7 @@ const EarthImagery = () => {
               onChange={(e) => setLat(e.target.value)}  variant="outlined" />
           </div>
           <div>
-            <Typography variant="subtitle2" sx={{color:'white',marginBottom:'0.5rem'}}>Set Degrees:</Typography>
+            <Typography variant="subtitle2" sx={{color:'white',marginBottom:'0.5rem'}}>Set Dimension:</Typography>
             <TextField id="outlined-basic"
               sx={{ width: '13.9rem',border:'solid 1px white',borderRadius:'4px',backgroundColor:'white' }}
               onChange={(e) => setDim(e.target.value)} variant="outlined" />
